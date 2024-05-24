@@ -26,8 +26,9 @@ const PROVIDER = new GoogleAuthProvider();
 function sendResponse(result) {
   globalThis.parent.self.postMessage(JSON.stringify(result), PARENT_FRAME);
 }
-alert(globalThis);
-globalThis.addEventListener('message', function({data}) {
+
+globalThis.addEventListener('message', function({data}) {\
+    alert(globalThis);
   if (data.initAuth) {
     // Opens the Google sign-in page in a popup, inside of an iframe in the
     // extension's offscreen document.
