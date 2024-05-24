@@ -28,7 +28,6 @@ function sendResponse(result) {
 }
 
 globalThis.addEventListener('message', function({data}) {
-    alert(globalThis);
   if (data.initAuth) {
     // Opens the Google sign-in page in a popup, inside of an iframe in the
     // extension's offscreen document.
